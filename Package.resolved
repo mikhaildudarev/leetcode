@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "algo",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/mikhaildudarev/algo.git",
+      "state" : {
+        "branch" : "master",
+        "revision" : "3e5c8940ffb5c3d27b156a177f6d99310dd31eda"
+      }
+    }
+  ],
+  "version" : 2
+}

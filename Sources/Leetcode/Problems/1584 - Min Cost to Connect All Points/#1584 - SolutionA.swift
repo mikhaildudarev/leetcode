@@ -1,5 +1,7 @@
 //  Created by Mikhail Dudarev on 27.04.2022.
 
+import Algo
+
 extension Problem1584MinCostToConnectAllPoints {
     
     final class SolutionA: Problem1584MinCostToConnectAllPointsSolution {
@@ -15,11 +17,11 @@ extension Problem1584MinCostToConnectAllPoints {
             
             edges.sort { $0.length < $1.length }
             
-            var disjointSet = DisjointSet(points)
+            var disjointSet = DisjointSet.QuickUnion(points)
             
             var result = Int.zero
             for edge in edges {
-                let didUnion = disjointSet.union(edge.start, edge.end)
+                let didUnion = try! disjointSet.union(edge.start, edge.end)
                 if didUnion {
                     result += edge.length
                 }
@@ -34,53 +36,4 @@ extension Problem1584MinCostToConnectAllPoints {
         
     }
     
-}
-
-private struct DisjointSet<Element: Hashable> {
-
-    typealias Parent = Int
-    typealias Root = Int
-    
-    struct Node {
-        let value: Element
-        var parent: Parent
-    }
-    
-    var nodes = [Node]()
-    var nodeIndices = [Element: Int]()
-    
-    init(_ elements: [Element]) {
-        elements.forEach {
-            let index = nodes.count
-            nodeIndices[$0] = index
-            nodes.append(Node(value: $0, parent: index))
-        }
-    }
-    
-    func find(_ element: Element) -> Root? {
-        guard var index = nodeIndices[element] else {
-            return nil
-        }
-        var node = nodes[index]
-        while node.parent != index {
-            index = node.parent
-            node = nodes[index]
-        }
-        return index
-    }
-    
-    mutating func union(_ element1: Element, _ element2: Element) -> Bool {
-        guard let root1 = find(element1) else {
-            fatalError("Element not found in set: \(element1)")
-        }
-        guard let root2 = find(element2) else {
-            fatalError("Element not found in set: \(element2)")
-        }
-        guard root1 != root2 else {
-            return false // elements already in same group
-        }
-        nodes[root1].parent = root2
-        return true
-    }
-
 }
