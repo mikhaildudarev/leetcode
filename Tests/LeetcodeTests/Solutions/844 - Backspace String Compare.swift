@@ -10,6 +10,11 @@ final class Problem844BackspaceStringCompareTests: LeetcodeTests {
         test(with: solution)
     }
     
+    func testSolutionB() {
+        let solution = Problem844BackspaceStringCompare.SolutionB()
+        test(with: solution)
+    }
+    
     private func test(with solution: Problem844BackspaceStringCompareSolution) {
         XCTAssertTrue(solution.backspaceCompare("ab#c", "ad#c"))
         XCTAssertTrue(solution.backspaceCompare("ab##", "c#d#"))
