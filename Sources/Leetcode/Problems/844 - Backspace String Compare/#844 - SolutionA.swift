@@ -5,7 +5,7 @@ extension Problem844BackspaceStringCompare {
     final class SolutionA: Problem844BackspaceStringCompareSolution {
         
         func backspaceCompare(_ s: String, _ t: String) -> Bool {
-            s.removingBackspaces() == t.removingBackspaces()
+            s.charactersByRemovingBackspaces() == t.charactersByRemovingBackspaces()
         }
         
     }
@@ -14,7 +14,7 @@ extension Problem844BackspaceStringCompare {
 
 private extension String {
     
-    func removingBackspaces() -> String {
+    func charactersByRemovingBackspaces() -> [Character] {
         var result = [Character]()
         for char in self {
             guard char != "#" else {
@@ -23,7 +23,7 @@ private extension String {
             }
             result.append(char)
         }
-        return String(result)
+        return result
     }
     
 }
