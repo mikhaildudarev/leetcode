@@ -17,7 +17,7 @@ extension Problem1584MinCostToConnectAllPoints {
             
             edges.sort { $0.length < $1.length }
             
-            var disjointSet = DisjointSet.QuickUnion(points)
+            let disjointSet = DisjointSet.QuickUnion(points)
             
             var result = Int.zero
             for edge in edges {
