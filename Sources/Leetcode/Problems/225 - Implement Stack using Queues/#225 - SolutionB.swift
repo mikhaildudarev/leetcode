@@ -4,15 +4,17 @@ import Algo
 
 extension Problem225ImplementStackUsingQueues {
     
-    final class SolutionA: Problem225ImplementStackUsingQueuesSolution {
+    final class SolutionB: Problem225ImplementStackUsingQueuesSolution {
         
         private var queue = Queue.Naive<Int>()
+        private var tail: Int?
         
         init() {}
         
         /// - Complexity: O(1)
         func push(_ x: Int) {
             queue.enqueue(x)
+            tail = x
         }
         
         /// - Complexity: O(N)
@@ -23,22 +25,16 @@ extension Problem225ImplementStackUsingQueues {
                 result = x
                 if queue.peek() != nil {
                     tempQueue.enqueue(x)
+                    tail = x
                 }
             }
             queue = tempQueue
             return result!
         }
         
-        /// - Complexity: O(N)
+        /// - Complexity: O(1)
         func top() -> Int {
-            var result: Int? = nil
-            let tempQueue = Queue.Naive<Int>()
-            while let x = queue.dequeue() {
-                result = x
-                tempQueue.enqueue(x)
-            }
-            queue = tempQueue
-            return result!
+            tail!
         }
         
         /// - Complexity: O(1)

@@ -10,6 +10,11 @@ final class Problem225ImplementStackUsingQueuesTests: LeetcodeTests {
         test(with: solution)
     }
     
+    func testSolutionB() {
+        let solution = Problem225ImplementStackUsingQueues.SolutionB()
+        test(with: solution)
+    }
+    
     private func test(with solution: Problem225ImplementStackUsingQueuesSolution) {
         solution.push(1)
         solution.push(2)
