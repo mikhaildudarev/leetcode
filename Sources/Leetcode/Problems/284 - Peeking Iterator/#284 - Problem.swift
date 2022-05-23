@@ -42,7 +42,9 @@
 // Swift IndexingIterator reference:
 // https://developer.apple.com/documentation/swift/indexingiterator
 
-struct Problem284PeekingIterator {}
+struct Problem284PeekingIterator {
+    private init() {}
+}
 
 protocol Problem284PeekingIteratorSolution {
     associatedtype Element: Equatable

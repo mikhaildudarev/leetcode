@@ -30,7 +30,9 @@
  Could you solve it without converting the integer to a string?
  */
 
-struct Problem9PalindromeNumber {}
+struct Problem9PalindromeNumber {
+    private init() {}
+}
 
 protocol Problem9PalindromeNumberSolution {
     func isPalindrome(_ x: Int) -> Bool

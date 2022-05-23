@@ -28,7 +28,9 @@
  Can you solve it in O(n) time complexity?
  */
 
-struct Problem581ShortestUnsortedContinuousSubarray {}
+struct Problem581ShortestUnsortedContinuousSubarray {
+    private init() {}
+}
 
 protocol Problem581ShortestUnsortedContinuousSubarraySolution {
     func findUnsortedSubarray(_ nums: [Int]) -> Int

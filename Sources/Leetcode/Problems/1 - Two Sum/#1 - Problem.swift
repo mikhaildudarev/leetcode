@@ -31,7 +31,9 @@
  Can you come up with an algorithm that is less than O(n2) time complexity?
  */
 
-struct Problem1TwoSum {}
+struct Problem1TwoSum {
+    private init() {}
+}
 
 protocol Problem1TwoSumSolution {
     func twoSum(_ nums: [Int], _ target: Int) -> [Int]

@@ -26,7 +26,9 @@
  isConnected[i][j] == isConnected[j][i]
  */
 
-struct Problem547NumberOfProvinces {}
+struct Problem547NumberOfProvinces {
+    private init() {}
+}
 
 protocol Problem547NumberOfProvincesSolution {
     func findCircleNum(_ isConnected: [[Int]]) -> Int

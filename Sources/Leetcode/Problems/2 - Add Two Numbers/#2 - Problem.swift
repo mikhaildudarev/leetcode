@@ -26,7 +26,9 @@
  It is guaranteed that the list represents a number that does not have leading zeros.
  */
 
-struct Problem2AddTwoNumbers {}
+struct Problem2AddTwoNumbers {
+    private init() {}
+}
 
 protocol Problem2AddTwoNumbersSolution {
     

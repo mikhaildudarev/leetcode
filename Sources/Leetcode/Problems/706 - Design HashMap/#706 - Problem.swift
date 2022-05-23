@@ -36,7 +36,9 @@
  At most 104 calls will be made to put, get, and remove.
  */
 
-struct Problem706DesignHashMap {}
+struct Problem706DesignHashMap {
+    private init() {}
+}
 
 protocol Problem706DesignHashMapSolution {
     init()

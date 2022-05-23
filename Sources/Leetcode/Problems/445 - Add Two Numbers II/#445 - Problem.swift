@@ -28,7 +28,9 @@
  Could you solve it without reversing the input lists?
  */
 
-struct Problem445AddTwoNumbersII {}
+struct Problem445AddTwoNumbersII {
+    private init() {}
+}
 
 protocol Problem445AddTwoNumbersIISolution {
     func addTwoNumbers(

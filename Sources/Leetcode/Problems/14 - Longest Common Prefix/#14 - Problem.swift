@@ -22,7 +22,9 @@
  strs[i] consists of only lower-case English letters.
  */
 
-struct Problem14LongestCommonPrefix {}
+struct Problem14LongestCommonPrefix {
+    private init() {}
+}
 
 protocol Problem14LongestCommonPrefixSolution {
     func longestCommonPrefix(_ strs: [String]) -> String

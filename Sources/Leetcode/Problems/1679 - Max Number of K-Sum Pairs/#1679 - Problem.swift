@@ -29,7 +29,9 @@
  1 <= k <= 109
  */
 
-struct Problem1679MaxNumberOfKSumPairs {}
+struct Problem1679MaxNumberOfKSumPairs {
+    private init() {}
+}
 
 protocol Problem1679MaxNumberOfKSumPairsSolution {
     func maxOperations(_ nums: [Int], _ k: Int) -> Int

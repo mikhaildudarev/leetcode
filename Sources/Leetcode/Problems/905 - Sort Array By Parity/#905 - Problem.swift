@@ -21,7 +21,9 @@
  0 <= nums[i] <= 5000
  */
 
-struct Problem905SortArrayByParity {}
+struct Problem905SortArrayByParity {
+    private init() {}
+}
 
 protocol Problem905SortArrayByParitySolution {
     func sortArrayByParity(_ nums: [Int]) -> [Int]

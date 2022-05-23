@@ -30,7 +30,9 @@
  Can you solve it in O(n) time and O(1) space?
  */
 
-struct Problem844BackspaceStringCompare {}
+struct Problem844BackspaceStringCompare {
+    private init() {}
+}
 
 protocol Problem844BackspaceStringCompareSolution {
     func backspaceCompare(_ s: String, _ t: String) -> Bool

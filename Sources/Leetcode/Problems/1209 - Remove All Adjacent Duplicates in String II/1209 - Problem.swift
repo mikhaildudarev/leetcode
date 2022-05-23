@@ -31,7 +31,9 @@
  s only contains lower case English letters.
  */
 
-struct Problem1209RemoveAllAdjacentDuplicatesInStringII {}
+struct Problem1209RemoveAllAdjacentDuplicatesInStringII {
+    private init() {}
+}
 
 protocol Problem1209RemoveAllAdjacentDuplicatesInStringIISolution {
     func removeDuplicates(_ s: String, _ k: Int) -> String

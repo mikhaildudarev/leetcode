@@ -70,7 +70,9 @@
  Answers within 10-5 of the actual value will be accepted.
  */
 
-struct Problem1396DesignUndergroundSystem {}
+struct Problem1396DesignUndergroundSystem {
+    private init() {}
+}
 
 protocol Problem1396DesignUndergroundSystemSolution {
     func checkIn(_ id: Int, _ stationName: String, _ t: Int)

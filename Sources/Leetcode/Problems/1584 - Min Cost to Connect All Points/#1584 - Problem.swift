@@ -25,7 +25,9 @@
  All pairs (xi, yi) are distinct.
  */
 
-struct Problem1584MinCostToConnectAllPoints {}
+struct Problem1584MinCostToConnectAllPoints {
+    private init() {}
+}
 
 protocol Problem1584MinCostToConnectAllPointsSolution {
     func minCostConnectPoints(_ points: [[Int]]) -> Int

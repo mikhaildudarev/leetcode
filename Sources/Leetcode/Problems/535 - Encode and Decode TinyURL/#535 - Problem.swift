@@ -30,7 +30,9 @@
  url is guranteed to be a valid URL.
  */
 
-struct Problem535EncodeAndDecodeTinyUrl {}
+struct Problem535EncodeAndDecodeTinyUrl {
+    private init() {}
+}
 
 protocol Problem535EncodeAndDecodeTinyUrlSolution {
     
