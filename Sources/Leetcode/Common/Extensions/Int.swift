@@ -17,3 +17,15 @@ extension Int {
     }
     
 }
+
+extension Int {
+    
+    var isOdd: Bool {
+        self & 1 == 1
+    }
+    
+    var isEven: Bool {
+        self & 1 == 0
+    }
+    
+}
