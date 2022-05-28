@@ -9,7 +9,7 @@ extension Problem1101EarliestMomentWhenEveryoneBecomeFriends {
         func earliestAcq(_ logs: [[Int]], _ n: Int) -> Int {
             let firstElement = Int.zero
             let sortedLogs = logs.sorted { $0[0] < $1[0] }
-            let set = DisjointSet.QuickFind(Array(0..<n))
+            let set = DisjointSet.UnionByRank(Array(0..<n))
             for log in sortedLogs {
                 try! set.union(log[1], log[2])
                 if set.allSatisfy({ try! set.connected($0, firstElement) }) {
