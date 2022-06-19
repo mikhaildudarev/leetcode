@@ -10,9 +10,15 @@ final class Problem1523CountOddNumbersInAnIntervalRangeTests: LeetcodeTests {
         test(with: solution)
     }
     
+    func testSolutionB() {
+        let solution = Problem1523CountOddNumbersInAnIntervalRange.SolutionB()
+        test(with: solution)
+    }
+    
     private func test(with solution: Problem1523CountOddNumbersInAnIntervalRangeSolution) {
         XCTAssertEqual(solution.countOdds(3, 7), 3)
         XCTAssertEqual(solution.countOdds(8, 10), 1)
+        XCTAssertEqual(solution.countOdds(21, 22), 1)
     }
     
 }
