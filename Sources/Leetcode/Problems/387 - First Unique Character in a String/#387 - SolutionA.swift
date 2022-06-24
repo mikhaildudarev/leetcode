@@ -21,14 +21,3 @@ extension Problem387 {
     }
 
 }
-
-extension Character {
-    
-    func latinLowercaseIndex() -> Int? {
-        guard let asciiValue = asciiValue else {
-            return nil
-        }
-        return Int(asciiValue - Character("a").asciiValue!)
-    }
-    
-}
