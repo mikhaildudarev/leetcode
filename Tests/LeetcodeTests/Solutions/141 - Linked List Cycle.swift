@@ -10,6 +10,11 @@ final class Problem141Tests: LeetcodeTests {
         test(with: solution)
     }
     
+    func testSolutionB() {
+        let solution = Problem141.SolutionB()
+        test(with: solution)
+    }
+    
     private func test(with solution: Problem141Solution) {
         let head1 = Problem141.ListNode(from: [3, 2, 0, -4])
         head1?.tail?.next = head1?.next(at: 1)
