@@ -30,6 +30,11 @@ final class Problem144Tests: LeetcodeTests {
         test(with: solution)
     }
     
+    func testSolutionB() {
+        let solution = Problem144.SolutionB()
+        test(with: solution)
+    }
+    
     private func test(with solution: Problem144Solution) {
         XCTAssertEqual(solution.preorderTraversal(test1Input), [1, 2, 3])
         XCTAssertEqual(solution.preorderTraversal(test2Input), [])
