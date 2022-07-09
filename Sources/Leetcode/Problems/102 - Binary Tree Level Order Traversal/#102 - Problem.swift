@@ -36,36 +36,6 @@ struct Problem102 {
 }
 
 protocol Problem102Solution {
-    typealias TreeNode = Problem102.TreeNode
+    typealias TreeNode = BinaryTreeNode
     func levelOrder(_ root: TreeNode?) -> [[Int]]
-}
-
-extension Problem102 {
-    
-    class TreeNode {
-        
-        var val: Int
-        var left: TreeNode?
-        var right: TreeNode?
-        
-        init() {
-            val = 0
-            left = nil
-            right = nil
-        }
-        
-        init(_ val: Int) {
-            self.val = val
-            left = nil
-            right = nil
-        }
-        
-        init(_ val: Int, _ left: TreeNode?, _ right: TreeNode?) {
-            self.val = val
-            self.left = left
-            self.right = right
-        }
-        
-    }
-    
 }

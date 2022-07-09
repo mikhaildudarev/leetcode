@@ -1,5 +1,7 @@
 //   Created by Mikhail Dudarev on 03.07.2022.
 
+import Algo
+
 /**
  # [94. Binary Tree Inorder Traversal](https://leetcode.com/problems/binary-tree-inorder-traversal)
  
@@ -32,36 +34,6 @@ struct Problem94 {
 }
 
 protocol Problem94Solution {
-    typealias TreeNode = Problem94.TreeNode
+    typealias TreeNode = BinaryTreeNode
     func inorderTraversal(_ root: TreeNode?) -> [Int]
-}
-
-extension Problem94 {
-    
-    class TreeNode {
-        
-        var val: Int
-        var left: TreeNode?
-        var right: TreeNode?
-        
-        init() {
-            val = 0
-            left = nil
-            right = nil
-        }
-        
-        init(_ val: Int) {
-            self.val = val
-            left = nil
-            right = nil
-        }
-        
-        init(_ val: Int, _ left: TreeNode?, _ right: TreeNode?) {
-            self.val = val
-            self.left = left
-            self.right = right
-        }
-        
-    }
-    
 }

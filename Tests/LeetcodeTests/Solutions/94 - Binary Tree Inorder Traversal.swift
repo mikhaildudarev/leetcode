@@ -5,7 +5,7 @@ import XCTest
 
 final class Problem94Tests: LeetcodeTests {
     
-    typealias TreeNode = Problem94.TreeNode
+    typealias TreeNode = Problem94Solution.TreeNode
     
     private var test1Input: TreeNode? {
         let root = TreeNode(1)
@@ -31,6 +31,10 @@ final class Problem94Tests: LeetcodeTests {
     
     func testSolutionB() {
         test(with: Problem94.SolutionB())
+    }
+    
+    func testSolutionC() {
+        test(with: Problem94.SolutionC())
     }
     
     private func test(with solution: Problem94Solution) {

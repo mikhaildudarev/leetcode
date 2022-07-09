@@ -5,7 +5,7 @@ import XCTest
 
 final class Problem102Tests: LeetcodeTests {
     
-    typealias TreeNode = Problem102.TreeNode
+    typealias TreeNode = Problem102Solution.TreeNode
     
     private var test1Input: TreeNode? {
         let root = TreeNode(3)

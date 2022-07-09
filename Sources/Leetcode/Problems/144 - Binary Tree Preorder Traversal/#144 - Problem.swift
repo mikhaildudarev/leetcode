@@ -33,36 +33,6 @@ struct Problem144 {
 }
 
 protocol Problem144Solution {
-    typealias TreeNode = Problem144.TreeNode
+    typealias TreeNode = BinaryTreeNode
     func preorderTraversal(_ root: TreeNode?) -> [Int]
-}
-
-extension Problem144 {
-    
-    class TreeNode {
-        
-        var val: Int
-        var left: TreeNode?
-        var right: TreeNode?
-        
-        init() {
-            val = 0
-            left = nil
-            right = nil
-        }
-        
-        init(_ val: Int) {
-            self.val = val
-            left = nil
-            right = nil
-        }
-        
-        init(_ val: Int, _ left: TreeNode?, _ right: TreeNode?) {
-            self.val = val
-            self.left = left
-            self.right = right
-        }
-        
-    }
-    
 }
