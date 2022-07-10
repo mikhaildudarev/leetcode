@@ -28,10 +28,25 @@ class BinaryTreeNode {
     
 }
 
+extension BinaryTreeNode {
+    
+    convenience init?(tree: BinaryTree<Int>) {
+        self.init(node: tree.root)
+    }
+    
+    convenience init?(node: BinaryTree<Int>.Node?) {
+        guard let node = node else {
+            return nil
+        }
+        self.init(node.value, BinaryTreeNode(node: node.left), BinaryTreeNode(node: node.right))
+    }
+    
+}
+
 extension BinaryTree {
     
-    convenience init(root: BinaryTreeNode?) {
-        self.init(root: BinaryTree.Node(root))
+    convenience init(root: BinaryTreeNode?, iteratorType: BinaryTree.Iterator.TraversalType = .preOrder) {
+        self.init(root: BinaryTree.Node(root), iteratorType: iteratorType)
     }
     
 }
