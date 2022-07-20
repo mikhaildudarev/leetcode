@@ -18,14 +18,29 @@ final class Problem98Tests: LeetcodeTests {
         return BinaryTreeNode(tree: tree)
     }
     
+    private var testInput3: TreeNode? {
+        let tree = try! BinaryTree(levelOrderedArray: [5, 4, 6, nil, nil, 3, 7])
+        return BinaryTreeNode(tree: tree)
+    }
+    
+    private var testInput4: TreeNode? {
+        let tree = try! BinaryTree(levelOrderedArray: [32, 26, 47, 19, nil, nil, 56, nil, 27])
+        return BinaryTreeNode(tree: tree)
+    }
+    
     func testSolutionA() {
-        let solution = Problem98.SolutionA()
-        test(with: solution)
+        test(with: Problem98.SolutionA())
+    }
+    
+    func testSolutionB() {
+        test(with: Problem98.SolutionB())
     }
     
     private func test(with solution: Problem98Solution) {
         XCTAssertTrue(solution.isValidBST(testInput1))
         XCTAssertFalse(solution.isValidBST(testInput2))
+        XCTAssertFalse(solution.isValidBST(testInput3))
+        XCTAssertFalse(solution.isValidBST(testInput4))
     }
     
 }
