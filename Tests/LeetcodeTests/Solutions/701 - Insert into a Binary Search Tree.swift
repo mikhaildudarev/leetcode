@@ -21,8 +21,11 @@ final class Problem701Tests: LeetcodeTests {
     }
     
     func testSolutionA() {
-        let solution = Problem701.SolutionA()
-        test(with: solution)
+        test(with: Problem701.SolutionA())
+    }
+    
+    func testSolutionB() {
+        test(with: Problem701.SolutionB())
     }
     
     private func test(with solution: Problem701Solution) {
