@@ -21,6 +21,10 @@ final class Problem700Tests: LeetcodeTests {
         test(with: Problem700.SolutionB())
     }
     
+    func testSolutionC() {
+        test(with: Problem700.SolutionC())
+    }
+    
     private func test(with solution: Problem700Solution) {
         XCTAssertEqual(
             BinaryTree(root: solution.searchBST(testInput, 2), iteratorType: .preOrder).map { $0.value },
